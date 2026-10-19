@@ -12,14 +12,14 @@
 const SITE = {
 
   // ---- Identitas ----
-  nama: "Nama Kamu",
-  email: "halo@emailkamu.com",
-  instagram: "https://instagram.com/",
-  behance: "https://behance.net/",
+  nama: "Khaidir Syafei",
+  email: "hello@khaidirsyafei.com",
+  instagram: "https://instagram.com/khaidirsyafei",
+  behance: "https://behance.net/khaidirsyafei",
   linkedin: "https://linkedin.com/",
 
   // ---- Foto latar bagian paling atas ("...Jadi Kenyataan") ----
-  fotoHero: "https://picsum.photos/seed/hero/1920/1080",   // ganti: "images/hero.jpg"
+  fotoHero: "images\hero1before.jpg",   // ganti: "images/hero.jpg"
 
   // ---- Buku ilustrasi ----
   judulBuku: "Judul Buku",
