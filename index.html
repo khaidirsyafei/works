@@ -14,7 +14,7 @@
 
   <!-- HEADER -->
   <header class="site-header">
-    <a href="#hero" class="logo">Khaidir Syafei<span>.</span></a>
+    <a href="#hero" class="logo"><span id="logoText">NamaKamu</span><span>.</span></a>
     <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">
       <span></span><span></span><span></span>
     </button>
@@ -47,24 +47,8 @@
 
       <div class="book-wrap">
         <div id="flipbook">
-          <div class="page page-cover" data-density="hard">
-            <div class="cover-inner">
-              <h3>Judul Buku</h3>
-              <p>Kumpulan ilustrasi oleh Nama Kamu</p>
-            </div>
-          </div>
-          <div class="page"><img src="https://picsum.photos/seed/book1/600/800" alt="Ilustrasi halaman 1"><span class="cap">Sketsa awal</span></div>
-          <div class="page"><img src="https://picsum.photos/seed/book2/600/800" alt="Ilustrasi halaman 2"><span class="cap">Pewarnaan</span></div>
-          <div class="page"><img src="https://picsum.photos/seed/book3/600/800" alt="Ilustrasi halaman 3"><span class="cap">Detail karakter</span></div>
-          <div class="page"><img src="https://picsum.photos/seed/book4/600/800" alt="Ilustrasi halaman 4"><span class="cap">Latar suasana</span></div>
-          <div class="page"><img src="https://picsum.photos/seed/book5/600/800" alt="Ilustrasi halaman 5"><span class="cap">Komposisi akhir</span></div>
-          <div class="page"><img src="https://picsum.photos/seed/book6/600/800" alt="Ilustrasi halaman 6"><span class="cap">Versi cetak</span></div>
-          <div class="page page-cover" data-density="hard">
-            <div class="cover-inner"><p>Terima kasih sudah membaca.</p></div>
-          </div>
         </div>
       </div>
-
       <div class="book-controls">
         <button id="prev" aria-label="Halaman sebelumnya">← Sebelumnya</button>
         <span id="pageInfo">1 / 8</span>
@@ -75,27 +59,7 @@
     <!-- 3. SELECTED WORKS -->
     <section class="works" id="works">
       <h2>Karya pilihan</h2>
-      <div class="grid">
-        <a class="card" href="#">
-          <img src="https://picsum.photos/seed/work1/1200/900" alt="Proyek 1" loading="lazy">
-          <div class="info"><h3>Judul Proyek Satu</h3><p>Ilustrasi Buku Anak</p></div>
-          <div class="hover">Lihat Detail Proyek →</div>
-        </a>
-        <a class="card" href="#">
-          <img src="https://picsum.photos/seed/work2/1200/900" alt="Proyek 2" loading="lazy">
-          <div class="info"><h3>Judul Proyek Dua</h3><p>Desain Karakter</p></div>
-          <div class="hover">Lihat Detail Proyek →</div>
-        </a>
-        <a class="card" href="#">
-          <img src="https://picsum.photos/seed/work3/1200/900" alt="Proyek 3" loading="lazy">
-          <div class="info"><h3>Judul Proyek Tiga</h3><p>Branding & Identitas</p></div>
-          <div class="hover">Lihat Detail Proyek →</div>
-        </a>
-        <a class="card" href="#">
-          <img src="https://picsum.photos/seed/work4/1200/900" alt="Proyek 4" loading="lazy">
-          <div class="info"><h3>Judul Proyek Empat</h3><p>Poster & Editorial</p></div>
-          <div class="hover">Lihat Detail Proyek →</div>
-        </a>
+      <div class="grid" id="grid">
       </div>
     </section>
   </main>
@@ -104,20 +68,21 @@
   <footer class="footer" id="contact">
     <div class="footer-top">
       <h2>Punya proyek? Ceritakan idenya.</h2>
-      <a class="mail" href="mailto:halo@emailkamu.com">halo@emailkamu.com</a>
+      <a class="mail" id="mail" href="mailto:halo@emailkamu.com">halo@emailkamu.com</a>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> Nama Kamu. Hak cipta dilindungi.</span>
+      <span>© <span id="year">2026</span> <span id="owner">Nama Kamu</span>. Hak cipta dilindungi.</span>
       <span class="links">
-        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://behance.net/" target="_blank" rel="noopener">Behance</a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a id="ig" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a id="be" href="https://behance.net/" target="_blank" rel="noopener">Behance</a>
+        <a id="li" href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
       </span>
-      <span>Desain & kode oleh Nama Kamu</span>
+      <span>Desain &amp; kode oleh <span id="owner2">Nama Kamu</span></span>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
