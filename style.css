@@ -212,3 +212,13 @@ main>section:not(.hero){padding-top:0;padding-bottom:0;margin-top:var(--sec)}
 .book-nav:disabled{opacity:.25;cursor:default}
 .book-section .sub:empty{display:none}
 .book-section h2:has(+ .sub:empty){margin-bottom:36px}
+
+/* mobile: teks kontak lebih kecil, kredit footer di tengah */
+@media (max-width:760px){
+  .contact p{font-size:.92rem;line-height:1.6}
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:6px}
+}
+
+/* sosmed: ikon saja, 5 dalam satu baris */
+.social-links{flex-wrap:nowrap;gap:12px}
+.social-links a{width:48px;height:48px;padding:0;display:grid;place-items:center;border-radius:50%;flex:none}

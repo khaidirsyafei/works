@@ -8,6 +8,16 @@ document.addEventListener('error', e => {
   if (e.target.tagName === 'IMG' && e.target.src !== PLACEHOLDER) e.target.src = PLACEHOLDER;
 }, true);
 
+// ikon sosmed (sederhana). Kunci = nama di config.js dalam huruf kecil
+const svg = inner => `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`;
+const ICONS = {
+  instagram: svg('<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/>'),
+  threads: svg('<circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/>'),
+  x: svg('<path d="M4 4l16 16M20 4l-6.5 6.5M10.5 13.5L4 20"/>'),
+  behance: `<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-weight="700" font-size="13" fill="currentColor">Bē</text></svg>`,
+  linkedin: svg('<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>')
+};
+
 (function buildFromConfig() {
   const $ = id => document.getElementById(id);
   // judul halaman diatur di index.html (SEO)
@@ -52,7 +62,7 @@ document.addEventListener('error', e => {
 
   // sosmed
   $('sosmed').innerHTML = SITE.sosmed.map(s =>
-    `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.nama)} ↗</a>`).join('');
+    `<a href="${esc(s.url)}" target="_blank" rel="me noopener" aria-label="${esc(s.nama)}" title="${esc(s.nama)}">${ICONS[s.nama.toLowerCase()] || esc(s.nama)}</a>`).join('');
 
   // detail proyek (jendela layar penuh berisi 3–4 karya)
   const modal = $('modal'), body = $('modalBody');
