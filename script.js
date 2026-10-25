@@ -5,7 +5,7 @@ const PLACEHOLDER = 'data:image/svg+xml;utf8,' + encodeURIComponent(
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const br = s => esc(s).replace(/\n/g, '<br>');
 document.addEventListener('error', e => {
-  if (e.target.tagName === 'IMG' && e.target.src !== PLACEHOLDER) e.target.src = PLACEHOLDER;
+  if (e.target.tagName === 'IMG' && !e.target.classList.contains('brand') && e.target.src !== PLACEHOLDER) e.target.src = PLACEHOLDER;
 }, true);
 
 // ikon sosmed (sederhana). Kunci = nama di config.js dalam huruf kecil
@@ -88,6 +88,22 @@ const ICONS = {
   };
   $('modalClose').addEventListener('click', closeModal);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+})();
+
+
+/* ========== TEMA TERANG / GELAP ========== */
+(function () {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  const root = document.documentElement;
+  const sync = () => btn.setAttribute('aria-checked', root.dataset.theme === 'light');
+  sync();
+  btn.addEventListener('click', () => {
+    const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    sync();
+  });
 })();
 
 /* ========== MENU (sliding dari kanan) ========== */
