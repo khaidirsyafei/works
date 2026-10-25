@@ -95,10 +95,10 @@ const SITE = {
 
   // ---- Sosial media (hapus baris yang tidak dipakai) ----
   sosmed: [
-    { nama: "Instagram", url: "https://instagram.com/" },
-    { nama: "Threads",   url: "https://threads.net/" },
-    { nama: "X",         url: "https://x.com/" },
-    { nama: "Behance",   url: "https://behance.net/" },
-    { nama: "LinkedIn",  url: "https://linkedin.com/" }
+    { nama: "Instagram", url: "https://instagram.com/khaidirsyafei" },
+    { nama: "Threads",   url: "https://www.threads.net/@khaidirsyafei" },
+    { nama: "X",         url: "https://x.com/khaidirsyafei" },
+    { nama: "Behance",   url: "https://behance.net/khaidirsyafei" },
+    { nama: "LinkedIn",  url: "https://www.linkedin.com/in/khaidirsyafei/" }
   ]
 };
